@@ -37,19 +37,34 @@ in
       Homepage = {
         URL = "https://google.com";
       };
-      Preferences = mkFirefoxPreferences {
-        "media.ffmpeg.vaapi.enabled" = true;
-        "widget.use-xdg-desktop-portal.file-picker" = 1;
-        "privacy.globalprivacycontrol.enabled" = true;
-        "browser.urlbar.suggest.quicksuggest.sponsored" = false;
-        "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
-        "browser.newtabpage.activity-stream.showSponsored" = false;
-        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
-        "browser.topsites.contile.enabled" = false;
-        "media.navigator.video.default_width" = 1920;
-        "media.navigator.video.default_height" = 1080;
-        "media.navigator.video.default_fps" = 30;
-      };
+      Preferences =
+        mkFirefoxPreferences {
+          "media.ffmpeg.vaapi.enabled" = true;
+          "widget.use-xdg-desktop-portal.file-picker" = 1;
+          "privacy.globalprivacycontrol.enabled" = true;
+          "browser.urlbar.suggest.quicksuggest.sponsored" = false;
+          "browser.urlbar.suggest.quicksuggest.nonsponsored" = false;
+          "browser.newtabpage.activity-stream.showSponsored" = false;
+          "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+          "browser.topsites.contile.enabled" = false;
+          "media.navigator.video.default_width" = 1920;
+          "media.navigator.video.default_height" = 1080;
+          "media.navigator.video.default_fps" = 30;
+        }
+        // {
+          "media.peerconnection.enabled" = {
+            Value = false;
+            Status = "locked";
+          };
+          "network.protocol-handler.external.magnet" = {
+            Value = false;
+            Status = "locked";
+          };
+          "network.protocol-handler.warn-external.magnet" = {
+            Value = true;
+            Status = "locked";
+          };
+        };
       PromptForDownloadLocation = true;
       SearchEngines = {
         Add = [
@@ -71,7 +86,12 @@ in
         ];
       };
 
-      ExtensionSettings = mkFirefoxAddons [
+      ExtensionSettings = {
+        "*" = {
+          installation_mode = "blocked";
+        };
+      }
+      // mkFirefoxAddons [
         {
           name = "ublock-origin";
           id = "uBlock0@raymondhill.net";
