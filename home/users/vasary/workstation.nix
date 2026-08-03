@@ -25,6 +25,7 @@
     ../../modules/bitwarden.nix
     ../../modules/fonts.nix
     ../../modules/terminal.nix
+    ../../modules/torrents.nix
     ../../modules/online-accounts.nix
     ../../modules/mailing.nix
     ../../modules/media.nix
