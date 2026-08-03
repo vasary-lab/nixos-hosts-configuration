@@ -13,6 +13,9 @@
       "online_accounts/google_email" = {
         owner = userName;
       };
+
+      "wireguard/peer_public_key" = { };
+      "wireguard/private_key" = { };
     };
   };
 }

@@ -14,6 +14,7 @@
     ../../modules/i18n.nix
     ../../modules/no-sleep.nix
     ../../modules/timezone.nix
+    ../../modules/wireguard.nix
     ../../modules/maintenance/cleanup.nix
     ../../modules/amd-gpu.nix
     ../../modules/secrets.nix
