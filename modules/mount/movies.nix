@@ -1,6 +1,6 @@
 {
   fileSystems."/mnt/NAS/Movies" = {
-    device = "10.10.0.4:/mnt/archive/media/movies";
+    device = "10.10.0.4:/mnt/archive/library/movies";
     fsType = "nfs";
     options = [
       "_netdev"
