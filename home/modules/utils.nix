@@ -28,6 +28,7 @@
     dust
     procs
     unzip
+    unrar
     fastfetch
     pciutils
     iw
