@@ -61,7 +61,7 @@
           "ru"
         ])
       ];
-      xkb-options = [ ];
+      xkb-options = [ "compose:rctrl" ];
       per-window = false;
     };
     "org/gnome/desktop/wm/keybindings" = {
