@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     libreoffice-qt-fresh
+    onlyoffice-desktopeditors
 
     hunspell
     hunspellDicts.ru_RU
