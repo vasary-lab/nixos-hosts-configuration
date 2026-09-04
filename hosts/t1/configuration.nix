@@ -29,7 +29,9 @@
     ../../modules/autologin.nix
     ../../modules/bluetooth.nix
     ../../modules/firmware-amd.nix
+    ../../modules/unfree-packages.nix
     ../../modules/printing.nix
+    ../../modules/scanning.nix
     ../../modules/printers/phaser-3020.nix
     ../../modules/no-docs.nix
     ../../modules/kde-connect.nix

@@ -1,14 +1,9 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   printerName = "Phaser_3020";
 in
 {
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "samsung-unified-linux-driver"
-    ];
-
   services.printing = {
     enable = true;
     drivers = [ pkgs.samsung-unified-linux-driver ];
