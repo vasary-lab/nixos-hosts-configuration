@@ -49,7 +49,6 @@ Main development machine for writing code, running containers, and managing proj
 
 ### System Services
 - `podman`: enabled with Docker compatibility, Docker socket, DNS-enabled default network, and auto-prune.
-- `ollama`: ROCm-enabled Ollama container, exposed on `11434`; started manually with `llm-on`.
 - MCP containers:
   `mcp-pihole`/`mcp-pihole-proxy` on `3100`,
   `mcp-paperless` on `3101`,
@@ -82,25 +81,11 @@ sudo nixos-rebuild switch --flake .#t1
 nix flake update
 ```
 
-### LLM Stack
-```bash
-llm-on               # Start Ollama and Open WebUI containers
-llm-off              # Stop Ollama and Open WebUI containers
-llm-log              # Follow Ollama logs
-```
-
-Ollama models are stored in the `ollama` container volume and managed with `ollama pull` / `ollama run`.
-
 Local endpoints:
-- Ollama API: `http://localhost:11434`
-- Ollama OpenAI-compatible API: `http://localhost:11434/v1`
-- Open WebUI: `http://localhost:3000`
 - MCP streamable HTTP endpoints: `http://localhost:3100/mcp` through `http://localhost:3105/mcp`, depending on the service.
 
 ### Service Checks
 ```bash
-systemctl status podman-ollama podman-open-webui
-journalctl -u podman-ollama -f -o cat
 podman ps
 systemctl --user status telegram zapzap bitwarden razer-mouse-defaults filter-chain
 ```
