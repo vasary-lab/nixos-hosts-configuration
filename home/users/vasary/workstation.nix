@@ -18,7 +18,9 @@
     ../../modules/development/codex.nix
     ../../modules/development/cursor.nix
     ../../modules/development/go.nix
+    ../../modules/development/lm-studio.nix
     ../../modules/development/node.nix
+    ../../modules/development/opencode.nix
     ../../modules/development/php.nix
     ../../modules/development/python.nix
     ../../modules/development/rust.nix

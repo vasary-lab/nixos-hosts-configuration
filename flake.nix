@@ -59,6 +59,8 @@
             allowUnfree = true;
             permittedInsecurePackages = [
               "ventoy-1.1.12"
+              # Required by opencode-desktop in the pinned nixpkgs.
+              "electron-41.10.7"
             ];
           };
         };

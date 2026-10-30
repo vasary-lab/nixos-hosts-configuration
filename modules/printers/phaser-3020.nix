@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  printerName = "Phaser_3020";
+  printerName = "Phaser3020";
 in
 {
   services.printing = {

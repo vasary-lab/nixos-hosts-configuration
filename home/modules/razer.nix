@@ -28,7 +28,12 @@ in
   systemd.user.services.razer-mouse-defaults = {
     Unit = {
       Description = "Apply Razer mouse DPI and lighting";
-      After = [ "graphical-session.target" ];
+      Wants = [ "openrazer-daemon.service" ];
+      After = [
+        "gnome-session.target"
+        "graphical-session.target"
+        "openrazer-daemon.service"
+      ];
       PartOf = [ "graphical-session.target" ];
     };
 
@@ -39,8 +44,6 @@ in
       RestartSec = "5s";
     };
 
-    Install = {
-      WantedBy = [ "default.target" ];
-    };
+    Install = { };
   };
 }
